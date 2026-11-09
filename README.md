@@ -66,12 +66,16 @@ None of the learned models beat persistence for flow rate. This negative result 
 
 Complete machine-readable results are available in [`results/metrics.json`](results/metrics.json).
 
+For an interactive walkthrough with data validation, exploratory plots, feature inspection, model evaluation, and conclusions, open [`notebooks/smart_water_forecasting.ipynb`](notebooks/smart_water_forecasting.ipynb).
+
 ## Repository structure
 
 ```text
 .
 ├── data/
 │   └── README.md          # Dataset source, schema, and placement
+├── notebooks/
+│   └── smart_water_forecasting.ipynb
 ├── results/
 │   ├── metrics.json
 │   └── README.md
@@ -127,6 +131,16 @@ python src/evaluate.py --data data/lakes_fe.csv --output results
 ```
 
 This regenerates `metrics.json` and both forecast plots.
+
+## Run the notebook
+
+After completing the data setup, start Jupyter from the repository root:
+
+```bash
+jupyter lab notebooks/smart_water_forecasting.ipynb
+```
+
+Run the cells from top to bottom. The notebook calls the same leakage-safe functions in `src/evaluate.py` as the command-line workflow, keeping the interactive analysis and reproducible evaluation aligned.
 
 ## Current limitations
 
