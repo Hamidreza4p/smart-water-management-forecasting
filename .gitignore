@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Kaggle/Acea data is downloaded separately.
+data/*.csv
+
+# Local model artifacts
+*.keras
+*.h5
+*.pkl
+*.joblib
+
+# Regenerated evaluation plots
+results/*.png
+
