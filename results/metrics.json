@@ -1,0 +1,73 @@
+{
+  "dataset": {
+    "rows": 6603,
+    "start": "2002-06-03",
+    "end": "2020-06-30",
+    "split": "chronological 80/20",
+    "feature_policy": "lagged observations only"
+  },
+  "evaluations": [
+    {
+      "target": "Actual_Lake_Level",
+      "observations": 6575,
+      "train_observations": 5260,
+      "test_observations": 1315,
+      "test_start": "2016-11-24",
+      "test_end": "2020-06-30",
+      "persistence": {
+        "rmse": 1.127181618627686,
+        "mae": 0.7174599327844816
+      },
+      "xgboost": {
+        "rmse": 0.899977361879036,
+        "mae": 0.6833868589707671,
+        "best_parameters": {
+          "learning_rate": 0.03,
+          "max_depth": 3,
+          "n_estimators": 150,
+          "subsample": 0.8
+        },
+        "best_cv_rmse": 1.1450253079893329
+      },
+      "arima_5_1_0": {
+        "rmse": 1.5184845689866473,
+        "mae": 1.2916030591979175
+      },
+      "sarimax_5_1_0": {
+        "rmse": 1.523982678041856,
+        "mae": 1.2934225403629542
+      }
+    },
+    {
+      "target": "Actual_Flow_Rate",
+      "observations": 6575,
+      "train_observations": 5260,
+      "test_observations": 1315,
+      "test_start": "2016-11-24",
+      "test_end": "2020-06-30",
+      "persistence": {
+        "rmse": 2.085308118036694,
+        "mae": 0.9466204709167917
+      },
+      "xgboost": {
+        "rmse": 2.1141501066024397,
+        "mae": 1.0166904419408551,
+        "best_parameters": {
+          "learning_rate": 0.03,
+          "max_depth": 3,
+          "n_estimators": 150,
+          "subsample": 0.8
+        },
+        "best_cv_rmse": 2.6494429092758853
+      },
+      "arima_5_1_0": {
+        "rmse": 3.5159019891451697,
+        "mae": 1.6520265197359072
+      },
+      "sarimax_5_1_0": {
+        "rmse": 3.5502379414103262,
+        "mae": 1.6691627995796272
+      }
+    }
+  ]
+}
